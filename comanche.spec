@@ -5,8 +5,9 @@ Version:	990405
 Release:	3
 License:	GPL
 Group:		Applications/System
-Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
-# Source0-md5:	cdfcfb009411ff33a0090b1314a66396
+#Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
+Source0:	com%{version}.tar.gz
+# Source0-md5:	96ad93f17de7b11c52cd9a4ff028570b
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Source3:	%{name}-mini.xpm
