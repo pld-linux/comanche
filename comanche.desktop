@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Apache Configuration
+Comment=A graphical configuration tool for the Apache web server
+Exec=comanche &
+Terminal=0
+Icon=comanche.xpm
+Type=Applications/System
+# vi: encoding=utf-8
