@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/comanche,%{_pixmapsdir}/mini,%{_applnkdir}/System}
 
 install comanche $RPM_BUILD_ROOT%{_bindir}
-rm -f apachectl INSTALL changes.txt comanche 
+rm -f apachectl INSTALL changes.txt comanche
 cp -a * $RPM_BUILD_ROOT%{_libdir}/comanche
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/System
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
