@@ -6,4 +6,5 @@ Exec=comanche &
 Terminal=0
 Icon=comanche.xpm
 Type=Applications/System
+Encoding=UTF-8
 # vi: encoding=utf-8
