@@ -7,4 +7,5 @@ Terminal=false
 Icon=comanche.xpm
 Type=Applications/System
 Encoding=UTF-8
+Categories=System;
 # vi: encoding=utf-8
