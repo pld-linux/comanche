@@ -21,6 +21,11 @@ Comanche aims to to make it easier to manage and configure Apache.
 Install the commanche package if you need a configuration manager for
 the Apache Web server. You'll also need to install the apache package.
 
+%description -l pl
+Commanche (COnfiguration MANager for apaCHE) jest interfejsem (frontendem)
+dla Apache, najpopularniejszego serwera WWW u¿ywanego w sieci Internet.
+Dziêki Commanche ³atwiej jest zarz±dzaæ i konfigurowaæ Apache.
+
 %prep
 %setup -q -n com%{version}
 
