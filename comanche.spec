@@ -11,10 +11,12 @@ Source0:	com%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Source3:	%{name}-mini.xpm
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	apachecfg
-Requires:	itcl, tk, rcs
+Requires:	itcl
+Requires:	rcs
+Requires:	tk
 BuildArch:	noarch
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Comanche (COnfiguration MANager for apaCHE) is a front-end for the
