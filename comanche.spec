@@ -2,7 +2,7 @@ Summary:	A front-end for configuring the Apache Web server
 Summary(pl):	Frontend do konfiguracji serwera WWW Apache
 Name:		comanche
 Version:	990405
-Release:	4
+Release:	5
 License:	GPL
 Group:		Applications/System
 #Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-%{_libdir}/comanche
+/usr/lib/comanche
 %{_applnkdir}/System/comanche.desktop
 %{_pixmapsdir}/comanche.xpm
 %{_pixmapsdir}/mini/mini-comanche.xpm
