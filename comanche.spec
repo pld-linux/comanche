@@ -8,7 +8,7 @@ Source1:	comanche.wmconfig
 Source2:	comanche.xpm
 Source3:	comanche-mini.xpm
 Copyright:	GPL
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	apachecfg
 Requires:	itcl, tk, rcs
 BuildArchitectures: noarch
