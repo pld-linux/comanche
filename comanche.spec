@@ -5,8 +5,6 @@ Version:	990405
 Release:	3
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
