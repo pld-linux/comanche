@@ -11,10 +11,10 @@ Source0:	com%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Source3:	%{name}-mini.xpm
-Obsoletes:	apachecfg
 Requires:	itcl
 Requires:	rcs
 Requires:	tk
+Obsoletes:	apachecfg
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,18 +40,18 @@ cat > comanche <<EOF
 #!/bin/sh
 #
 
-cd /usr/lib/comanche
+cd %{_prefix}/lib/comanche
 exec %{_bindir}/itkwish3.0 main.tcl %{_sysconfdir}/httpd/conf
 EOF
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},/usr/lib/comanche,%{_pixmapsdir}/mini,%{_applnkdir}/System}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_prefix}/lib/comanche,%{_pixmapsdir}/mini,%{_desktopdir}}
 
 install comanche $RPM_BUILD_ROOT%{_bindir}
 rm -f apachectl INSTALL changes.txt comanche
-cp -a * $RPM_BUILD_ROOT/usr/lib/comanche
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/System
+cp -a * $RPM_BUILD_ROOT%{_prefix}/lib/comanche
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/mini/mini-comanche.xpm
 
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-/usr/lib/comanche
-%{_applnkdir}/System/comanche.desktop
+%{_prefix}/lib/comanche
+%{_desktopdir}/comanche.desktop
 %{_pixmapsdir}/comanche.xpm
 %{_pixmapsdir}/mini/mini-comanche.xpm
