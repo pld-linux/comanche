@@ -2,7 +2,7 @@ Summary:	A front-end for configuring the Apache Web server
 Summary(pl):	Frontend do konfiguracji serwera WWW Apache
 Name:		comanche
 Version:	990405
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/System
 #Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
@@ -40,17 +40,17 @@ cat > comanche <<EOF
 #!/bin/sh
 #
 
-cd %{_libdir}/comanche
+cd /usr/lib/comanche
 exec %{_bindir}/itkwish3.0 main.tcl %{_sysconfdir}/httpd/conf
 EOF
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/comanche,%{_pixmapsdir}/mini,%{_applnkdir}/System}
+install -d $RPM_BUILD_ROOT{%{_bindir},/usr/lib/comanche,%{_pixmapsdir}/mini,%{_applnkdir}/System}
 
 install comanche $RPM_BUILD_ROOT%{_bindir}
 rm -f apachectl INSTALL changes.txt comanche
-cp -a * $RPM_BUILD_ROOT%{_libdir}/comanche
+cp -a * $RPM_BUILD_ROOT/usr/lib/comanche
 install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/System
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
 install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/mini/mini-comanche.xpm
