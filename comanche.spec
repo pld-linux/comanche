@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
+# Source0-md5:	cdfcfb009411ff33a0090b1314a66396
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Source3:	%{name}-mini.xpm
