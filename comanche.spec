@@ -1,18 +1,20 @@
-Summary:	A front-end for configuring the Apache Web server.
+Summary:	A front-end for configuring the Apache Web server
+Summary(pl):	Frontend do konfiguracji serwera WWW Apache
 Name:		comanche
 Version:	990405
 Release:	3
-Group:		Utilities/System
-Group(pl):	Narzêdzia/System
-Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
-Source1:	comanche.wmconfig
-Source2:	comanche.xpm
-Source3:	comanche-mini.xpm
 License:	GPL
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
+Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
+Source1:	%{name}.desktop
+Source2:	%{name}.xpm
+Source3:	%{name}-mini.xpm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Obsoletes:	apachecfg
 Requires:	itcl, tk, rcs
-BuildArchitectures:	noarch
+BuildArch:	noarch
 
 %description
 Comanche (COnfiguration MANager for apaCHE) is a front-end for the
@@ -33,7 +35,7 @@ Apache.
 
 %build
 cat > comanche <<EOF
-#!/bin/bash
+#!/bin/sh
 #
 
 cd %{_libdir}/comanche
@@ -42,16 +44,14 @@ EOF
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/comanche,%{_datadir}/icons/mini}
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/comanche,%{_pixmapsdir}/mini,%{_applnkdir}/System}
 
 install comanche $RPM_BUILD_ROOT%{_bindir}
-rm apachectl INSTALL changes.txt comanche 
+rm -f apachectl INSTALL changes.txt comanche 
 cp -a * $RPM_BUILD_ROOT%{_libdir}/comanche
-install $RPM_SOURCE_DIR/comanche.wmconfig $RPM_BUILD_ROOT%{_sysconfdir}/X11/wmconfig/comanche
-install $RPM_SOURCE_DIR/comanche.xpm $RPM_BUILD_ROOT%{_datadir}/icons
-install $RPM_SOURCE_DIR/comanche-mini.xpm \
-	$RPM_BUILD_ROOT%{_datadir}/icons/mini/mini-comanche.xpm
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/System
+install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
+install %{SOURCE3} $RPM_BUILD_ROOT%{_pixmapsdir}/mini/mini-comanche.xpm
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,6 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_libdir}/comanche
-%attr(600,root,root) %config(missingok) %{_sysconfdir}/X11/wmconfig/comanche
-%{_datadir}/icons/comanche.xpm
-%{_datadir}/icons/mini/mini-comanche.xpm
+%{_applnkdir}/System/comanche.desktop
+%{_pixmapsdir}/comanche.xpm
+%{_pixmapsdir}/mini/mini-comanche.xpm
