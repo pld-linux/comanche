@@ -1,0 +1,6 @@
+apachecfg name "Apache Configuration"
+apachecfg description "A graphical configuration tool for the Apache web server"
+apachecfg icon "comanche.xpm"
+apachecfg mini-icon "mini-comanche.xpm"
+apachecfg exec "comanche &"
+apachecfg group Administration
