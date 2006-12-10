@@ -2,10 +2,10 @@
 Name=Apache Configuration
 Comment=A graphical configuration tool for the Apache web server
 Comment[pl]=Graficzne narzędzie do konfiguracji serwera WWW Apache
-Exec=comanche &
+Exec=comanche.sh &
 Terminal=false
 Icon=comanche.xpm
-Type=Applications/System
+Type=Applications
 Encoding=UTF-8
-Categories=System;
+Categories=System;Administration;
 # vi: encoding=utf-8
