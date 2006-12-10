@@ -1,13 +1,14 @@
 Summary:	A front-end for configuring the Apache Web server
 Summary(pl):	Frontend do konfiguracji serwera WWW Apache
 Name:		comanche
-Version:	990405
-Release:	5
+Version:	3
+%define		_rc      b4
+Release:	0%{_rc}
 License:	GPL
 Group:		Applications/System
-#Source0:	http://comanche.com.dtu.dk/comanche/download/com%{version}.tar.gz
-Source0:	com%{version}.tar.gz
-# Source0-md5:	96ad93f17de7b11c52cd9a4ff028570b
+Source0:	http://www.comanche.org/downloads/comanche%{version}.%{release}-src.tar.gz
+# Source0-md5:	3f0a8eab0b16dbe05bbea95b72a23551
+#Source0:	com%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Source3:	%{name}-mini.xpm
@@ -33,10 +34,10 @@ sieci Internet. Dziêki Commanche ³atwiej jest zarz±dzaæ i konfigurowaæ
 Apache.
 
 %prep
-%setup -q -n com%{version}
+%setup -q -n comanche%{version}-%{release}
 
 %build
-cat > comanche <<EOF
+cat > comanche.sh <<EOF
 #!/bin/sh
 #
 
@@ -48,8 +49,8 @@ EOF
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_prefix}/lib/comanche,%{_pixmapsdir}/mini,%{_desktopdir}}
 
-install comanche $RPM_BUILD_ROOT%{_bindir}
-rm -f apachectl INSTALL changes.txt comanche
+install comanche.sh $RPM_BUILD_ROOT%{_bindir}
+rm -f apachectl INSTALL changes.txt comanche.sh
 cp -a * $RPM_BUILD_ROOT%{_prefix}/lib/comanche
 install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 install %{SOURCE2} $RPM_BUILD_ROOT%{_pixmapsdir}
@@ -64,4 +65,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_prefix}/lib/comanche
 %{_desktopdir}/comanche.desktop
 %{_pixmapsdir}/comanche.xpm
-%{_pixmapsdir}/mini/mini-comanche.xpm
+%{_pixmapsdir}/mini
