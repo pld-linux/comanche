@@ -33,7 +33,7 @@ sieci Internet. Dziêki Commanche ³atwiej jest zarz±dzaæ i konfigurowaæ
 Apache.
 
 %prep
-%setup -q -n comanche%{version}-%{release}
+%setup -q -n comanche%{version}-0%{_rc}
 
 %build
 cat > comanche.sh <<EOF
