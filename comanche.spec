@@ -6,9 +6,8 @@ Version:	3
 Release:	0%{_rc}
 License:	GPL
 Group:		Applications/System
-Source0:	http://www.comanche.org/downloads/comanche%{version}.%{release}-src.tar.gz
+Source0:	http://www.comanche.org/downloads/comanche%{version}.0%{_rc}-src.tar.gz
 # Source0-md5:	3f0a8eab0b16dbe05bbea95b72a23551
-#Source0:	com%{version}.tar.gz
 Source1:	%{name}.desktop
 Source2:	%{name}.xpm
 Source3:	%{name}-mini.xpm
