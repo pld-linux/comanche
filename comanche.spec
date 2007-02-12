@@ -1,5 +1,5 @@
 Summary:	A front-end for configuring the Apache Web server
-Summary(pl.UTF-8):   Frontend do konfiguracji serwera WWW Apache
+Summary(pl.UTF-8):	Frontend do konfiguracji serwera WWW Apache
 Name:		comanche
 Version:	990405
 Release:	5
