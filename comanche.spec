@@ -1,5 +1,5 @@
 Summary:	A front-end for configuring the Apache Web server
-Summary(pl):	Frontend do konfiguracji serwera WWW Apache
+Summary(pl.UTF-8):   Frontend do konfiguracji serwera WWW Apache
 Name:		comanche
 Version:	3
 %define		_rc      b4
@@ -26,10 +26,10 @@ Comanche aims to to make it easier to manage and configure Apache.
 Install the commanche package if you need a configuration manager for
 the Apache Web server. You'll also need to install the apache package.
 
-%description -l pl
+%description -l pl.UTF-8
 Commanche (COnfiguration MANager for apaCHE) jest interfejsem
-(frontendem) dla Apache, najpopularniejszego serwera WWW u¿ywanego w
-sieci Internet. Dziêki Commanche ³atwiej jest zarz±dzaæ i konfigurowaæ
+(frontendem) dla Apache, najpopularniejszego serwera WWW uÅ¼ywanego w
+sieci Internet. DziÄ™ki Commanche Å‚atwiej jest zarzÄ…dzaÄ‡ i konfigurowaÄ‡
 Apache.
 
 %prep
