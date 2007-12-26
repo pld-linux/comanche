@@ -5,6 +5,6 @@ Comment[pl]=Graficzne narzędzie do konfiguracji serwera WWW Apache
 Exec=comanche &
 Terminal=false
 Icon=comanche
-Type=Applications/System
+Type=Application
 Categories=System;
 # vi: encoding=utf-8
